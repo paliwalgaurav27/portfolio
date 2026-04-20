@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gaurav Paliwal is a self-taught frontend developer building responsive, modern web experiences with vanilla web technologies.">
+  <title>Gaurav Paliwal | Frontend Developer</title>
+  <script>
+    (function () {
+      var storedTheme = localStorage.getItem('portfolio-theme');
+      document.documentElement.setAttribute('data-theme', storedTheme === 'dark' ? 'dark' : 'light');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">Gaurav Paliwal</a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="menu-toggle-line"></span>
+      </button>
+      <div class="nav-panel">
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </nav>
+        <div class="theme-switcher" aria-label="Theme switcher">
+          <button class="theme-dot" type="button" data-set-theme="light" aria-label="Switch to light theme" aria-pressed="false"></button>
+          <button class="theme-dot" type="button" data-set-theme="dark" aria-label="Switch to dark theme" aria-pressed="false"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="hero-geo geo-top-right" style="--rotate:24deg;"></span>
+      <span class="hero-geo geo-bottom-left" style="--rotate:0deg;"></span>
+      <span class="hero-geo geo-top-left" style="--rotate:30deg;"></span>
+      <div class="container hero-inner">
+        <div class="avatar-shell hero-fade">
+          <span class="avatar-ring"></span>
+          <img class="avatar-photo" src="https://placehold.co/320x320/F3F4F6/111111?text=Gaurav" alt="Portrait of Gaurav Paliwal">
+        </div>
+        <div class="hero-copy">
+          <p class="hero-greeting hero-fade">Hello, I'm</p>
+          <h1 class="hero-name hero-fade">Gaurav Paliwal</h1>
+          <p class="typing-line hero-fade"><span data-typing></span><span class="typing-cursor">|</span></p>
+          <p class="hero-description hero-fade">A web and frontend developer focused on building polished, responsive interfaces with thoughtful interaction, strong fundamentals, and a steady bias toward learning by building.</p>
+          <div class="hero-actions hero-fade">
+            <a class="btn btn-primary" href="projects.html">View Projects</a>
+            <a class="btn btn-secondary" href="about.html">About Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-preview">
+      <div class="container">
+        <div class="about-preview-card reveal">
+          <span class="eyebrow">About Me</span>
+          <h2 class="section-title">Learning in public, building with intent.</h2>
+          <p>Gaurav Paliwal is a self-taught developer who moved from commerce studies into coding through persistence, online learning, and AI-assisted practice. He enjoys turning visual ideas into usable interfaces and sees every project as a step toward sharper frontend craft.</p>
+          <a class="text-link" href="about.html">Read More →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Capabilities</span>
+          <h2 class="section-title">My Skills</h2>
+        </div>
+        <div class="skills-list">
+          <div class="skill-row reveal">
+            <span class="skill-icon icon-html" aria-hidden="true"></span>
+            <span class="skill-label">HTML5</span>
+            <div class="skill-track"><div class="skill-fill" data-progress="95"></div></div>
+            <span class="skill-percentage">95%</span>
+          </div>
+          <div class="skill-row reveal delay-1">
+            <span class="skill-icon icon-css" aria-hidden="true"></span>
+            <span class="skill-label">CSS3</span>
+            <div class="skill-track"><div class="skill-fill" data-progress="90"></div></div>
+            <span class="skill-percentage">90%</span>
+          </div>
+          <div class="skill-row reveal delay-2">
+            <span class="skill-icon icon-js" aria-hidden="true"></span>
+            <span class="skill-label">JavaScript</span>
+            <div class="skill-track"><div class="skill-fill" data-progress="85"></div></div>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-row reveal delay-3">
+            <span class="skill-icon icon-react" aria-hidden="true"></span>
+            <span class="skill-label">React</span>
+            <div class="skill-track"><div class="skill-fill" data-progress="75"></div></div>
+            <span class="skill-percentage">75%</span>
+          </div>
+          <div class="skill-row reveal">
+            <span class="skill-icon icon-github" aria-hidden="true"></span>
+            <span class="skill-label">Git &amp; GitHub</span>
+            <div class="skill-track"><div class="skill-fill" data-progress="80"></div></div>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <div class="skill-row reveal delay-1">
+            <span class="skill-icon icon-figma" aria-hidden="true"></span>
+            <span class="skill-label">Figma</span>
+            <div class="skill-track"><div class="skill-fill" data-progress="70"></div></div>
+            <span class="skill-percentage">70%</span>
+          </div>
+          <div class="skill-row reveal delay-2">
+            <span class="skill-icon icon-python" aria-hidden="true"></span>
+            <span class="skill-label">Python</span>
+            <div class="skill-track"><div class="skill-fill" data-progress="60"></div></div>
+            <span class="skill-percentage">60%</span>
+          </div>
+          <div class="skill-row reveal delay-3">
+            <span class="skill-icon icon-odoo" aria-hidden="true"></span>
+            <span class="skill-label">Odoo</span>
+            <div class="skill-track"><div class="skill-fill" data-progress="65"></div></div>
+            <span class="skill-percentage">65%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Work</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <div class="projects-grid" id="featured-projects"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="social-links">
+        <a class="social-link" href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.24c-3.34.73-4.04-1.41-4.04-1.41-.55-1.37-1.33-1.73-1.33-1.73-1.09-.73.08-.72.08-.72 1.2.09 1.84 1.23 1.84 1.23 1.08 1.83 2.82 1.3 3.51.99.11-.77.42-1.29.76-1.58-2.67-.3-5.47-1.31-5.47-5.86 0-1.3.47-2.36 1.23-3.19-.12-.3-.53-1.54.12-3.21 0 0 1.01-.32 3.3 1.22a11.48 11.48 0 0 1 6 0c2.29-1.54 3.3-1.22 3.3-1.22.65 1.67.24 2.91.12 3.21.77.83 1.23 1.89 1.23 3.19 0 4.56-2.81 5.56-5.49 5.85.43.37.82 1.1.82 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a class="social-link" href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.48 2.48 0 1 0 5 8.46a2.48 2.48 0 0 0-.02-4.96ZM3 9h4v12H3Zm7 0h3.83v1.64h.05c.53-1.01 1.84-2.08 3.79-2.08 4.05 0 4.8 2.5 4.8 5.76V21h-4v-5.89c0-1.4-.03-3.2-2.08-3.2-2.08 0-2.4 1.52-2.4 3.1V21h-4Z"/></svg>
+        </a>
+        <a class="social-link" href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter/X">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m18.9 2 2.6 3.7-5.7 6.5L22 22h-5.1l-4-5.2L8.2 22H2.6l6.2-7.1L2 2h5.2l3.6 4.8L15 2Zm-1.8 17.1h1.4L6.9 4.8H5.4Z"/></svg>
+        </a>
+        <a class="social-link" href="mailto:gaurav@example.com" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm0 2v.51l9 5.4 9-5.4V7l-9 5.4L3 7Zm18 10V9.84l-8.48 5.09a1 1 0 0 1-1.04 0L3 9.84V17h18Z"/></svg>
+        </a>
+      </div>
+      <p class="footer-note">© 2026 Gaurav Paliwal. Built with Vanilla Web Tech.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
