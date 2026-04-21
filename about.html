@@ -29,8 +29,12 @@
           </ul>
         </nav>
         <div class="theme-switcher" aria-label="Theme switcher">
-          <button class="theme-dot" type="button" data-set-theme="light" aria-label="Switch to light theme" aria-pressed="false"></button>
-          <button class="theme-dot" type="button" data-set-theme="dark" aria-label="Switch to dark theme" aria-pressed="false"></button>
+          <button class="theme-dot" type="button" data-set-theme="light" aria-label="Switch to light theme" aria-pressed="false">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button class="theme-dot" type="button" data-set-theme="dark" aria-label="Switch to dark theme" aria-pressed="false">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -136,6 +140,23 @@
             <div class="about-tool-track"><div class="about-tool-fill" data-progress="80"></div></div>
             <p class="about-tool-value">80%</p>
           </article>
+          <article class="about-tool-card reveal" style="transition-delay:800ms;">
+            <img class="about-tool-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase icon">
+            <h3 class="about-tool-name">Firebase</h3>
+            <div class="about-tool-track"><div class="about-tool-fill" data-progress="60"></div></div>
+            <p class="about-tool-value">60%</p>
+          </article>
+          <article class="about-tool-card reveal" style="transition-delay:880ms;">
+            <span class="about-inline-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <circle cx="12" cy="12" r="9" opacity="0.2"/>
+                <path d="M12 3C6.48 3 2 7.48 2 13s4.48 10 10 10 10-4.48 10-10S17.52 3 12 3zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3-8c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/>
+              </svg>
+            </span>
+            <h3 class="about-tool-name">Agentic AI</h3>
+            <div class="about-tool-track"><div class="about-tool-fill" data-progress="70"></div></div>
+            <p class="about-tool-value">70%</p>
+          </article>
         </div>
       </div>
     </section>
@@ -208,6 +229,28 @@
             <h3 class="about-tool-name">Ollama</h3>
             <span class="about-use-case">Local LLM Host</span>
             <p class="about-ai-desc">Run AI models locally on my machine for private development</p>
+          </article>
+          <article class="about-tool-card about-ai-card reveal" style="transition-delay:480ms;">
+            <span class="about-inline-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </span>
+            <h3 class="about-tool-name">GitHub Copilot</h3>
+            <span class="about-use-case">AI Code Partner</span>
+            <p class="about-ai-desc">Intelligent code completion and suggestions powered by OpenAI Codex</p>
+          </article>
+          <article class="about-tool-card about-ai-card reveal" style="transition-delay:560ms;">
+            <span class="about-inline-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M9 12h6M12 9v6"></path>
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M7.5 7.5l9 9"></path>
+              </svg>
+            </span>
+            <h3 class="about-tool-name">Codex</h3>
+            <span class="about-use-case">Code Generation Model</span>
+            <p class="about-ai-desc">Powerful AI model that understands and generates code from natural language</p>
           </article>
         </div>
       </div>

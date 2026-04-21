@@ -189,6 +189,81 @@ const projectsData = [
   }
 ];
 
+const honorableMentionsData = [
+  {
+    title: "Portfolio Website",
+    description: "A modern, animated portfolio showcasing my projects with smooth transitions and responsive design.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    icon: "🎨"
+  },
+  {
+    title: "E-Commerce Website",
+    description: "Full-featured shopping platform with product catalog, shopping cart, and checkout functionality.",
+    tags: ["React", "Node.js", "MongoDB"],
+    icon: "🛒"
+  },
+  {
+    title: "Quiz Application",
+    description: "Interactive quiz app with timer, score tracking, and instant feedback on answers.",
+    tags: ["JavaScript", "HTML5", "CSS3"],
+    icon: "❓"
+  },
+  {
+    title: "Todo List App",
+    description: "Productivity tool with add, edit, delete, and local storage persistence features.",
+    tags: ["React", "LocalStorage", "CSS"],
+    icon: "✓"
+  },
+  {
+    title: "Student Management System",
+    description: "Database-driven application for managing student records, grades, and enrollment.",
+    tags: ["Python", "Flask", "SQLite"],
+    icon: "🎓"
+  },
+  {
+    title: "Weather Application",
+    description: "Real-time weather app displaying current conditions, forecasts, and location-based data.",
+    tags: ["JavaScript", "API", "CSS"],
+    icon: "🌤️"
+  },
+  {
+    title: "Stone Paper Scissors Game",
+    description: "Classic game with AI opponent, score tracking, and smooth animations.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    icon: "🎮"
+  },
+  {
+    title: "Calculator App",
+    description: "Scientific calculator with history, keyboard support, and responsive interface.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    icon: "🧮"
+  },
+  {
+    title: "Password Generator",
+    description: "Secure password generator with customizable length and character options.",
+    tags: ["JavaScript", "Security", "Utility"],
+    icon: "🔐"
+  },
+  {
+    title: "Expense Tracker",
+    description: "Personal finance app with category-wise expense logging, charts, and budget alerts.",
+    tags: ["React", "Chart.js", "LocalStorage"],
+    icon: "💰"
+  },
+  {
+    title: "Markdown Previewer",
+    description: "Real-time markdown editor with live preview and syntax highlighting support.",
+    tags: ["React", "Marked.js", "CSS"],
+    icon: "📝"
+  },
+  {
+    title: "Pomodoro Timer",
+    description: "Productivity timer with work/break cycles, notifications, and task management.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    icon: "⏱️"
+  }
+];
+
 let revealObserver;
 let revealObserverInitialized = false;
 
@@ -200,6 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSkillBars();
   renderFeaturedProjects();
   renderProjectsPage();
+  renderHonorableMentions();
   renderProjectDetail();
 });
 
@@ -380,6 +456,34 @@ function renderFeaturedProjects() {
             <a class="text-link" href="project-detail.html?id=${project.id}">View Project &rarr;</a>
           </div>
         </article>
+      `;
+    })
+    .join("");
+
+  initRevealAnimations();
+}
+
+function renderHonorableMentions() {
+  const target = document.getElementById("honorable-mentions");
+  if (!target) {
+    return;
+  }
+
+  target.innerHTML = honorableMentionsData
+    .map((project, index) => {
+      const tagsList = project.tags
+        .map((tag) => `<span class="mini-tag">${tag}</span>`)
+        .join("");
+      
+      return `
+        <div class="mini-project-card reveal" style="transition-delay:${(index % 3) * 80}ms;">
+          <div class="mini-project-header">
+            <div class="mini-project-icon">${project.icon}</div>
+            <h4>${project.title}</h4>
+          </div>
+          <p class="mini-project-desc">${project.description}</p>
+          <div class="mini-tags">${tagsList}</div>
+        </div>
       `;
     })
     .join("");
