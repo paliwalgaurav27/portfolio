@@ -2358,6 +2358,109 @@ html[data-theme="dark"] .brand-icon {
 
 }
 
+/* Hobbies Section */
+.about-hobbies-section {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 3%, var(--bg)), var(--bg-secondary));
+}
+
+.hobbies-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.hobby-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 2rem 1.8rem;
+  text-align: center;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hobby-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 5%, transparent), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hobby-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 48px var(--accent-glow);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.hobby-card:hover::before {
+  opacity: 1;
+}
+
+.hobby-icon {
+  font-size: 3.5rem;
+  display: inline-block;
+  transition: transform 0.35s ease;
+  z-index: 1;
+}
+
+.hobby-card:hover .hobby-icon {
+  transform: scale(1.15) rotate(8deg);
+}
+
+.hobby-title {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0;
+  background: var(--projects-title-gradient);
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  z-index: 1;
+  position: relative;
+}
+
+.hobby-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hobbies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .hobby-card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .hobby-icon {
+    font-size: 3rem;
+  }
+
+  .hobby-title {
+    font-size: 1.1rem;
+  }
+
+  .hobby-desc {
+    font-size: 0.9rem;
+  }
+}
+
 /* AI Tools Section */
 .ai-tools-section {
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 4%, var(--bg)), var(--bg-secondary));
