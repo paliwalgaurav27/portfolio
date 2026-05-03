@@ -98,6 +98,99 @@ const projectsData = [
     ]
   },
   {
+    id: "6",
+    title: "DOM Inspector Playground",
+    category: "WEB APP / TOOL",
+    tagline: "An interactive playground to explore how browsers parse and render HTML into the Document Object Model (DOM).",
+    thumbnail: "img/dom-playground/Screenshot 2026-05-02 113752.png",
+    heroImage: "img/dom-playground/Screenshot 2026-05-02 113752.png",
+    shortDesc: "A visual educational tool for exploring the DOM, featuring an HTML editor, live preview, interactive DOM tree, and browser auto-fix comparison.",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    builtWith: ["Vanilla JS", "DOMParser", "iframe.srcdoc", "window.postMessage", "Prettier Standalone"],
+    features: [
+      "📝 HTML Editor with Indentation",
+      "⚡ Live Rendered Preview (iframe)",
+      "🌳 Interactive DOM Tree Explorer",
+      "🔍 Node Selection & Detail Modal",
+      "🛠️ Browser Fixes Comparison Diff",
+      "🌙 Dark/Light Theme Persistence"
+    ],
+    theStory: "Understanding how browsers translate raw HTML into a living Document Object Model can be challenging for beginners. Many developers write HTML without realizing how the browser auto-corrects malformed markup or structures the nested nodes. I built the DOM Inspector Playground to demystify this process. It provides a split-pane environment where you can type HTML, instantly see it rendered, and interact with the resulting DOM tree side-by-side.",
+    theIdea: "The core idea was to create an educational tool that bridges the gap between written code and browser interpretation. By allowing users to type HTML and immediately see both the visual output and the underlying DOM structure, the tool makes abstract concepts tangible. Features like the 'Browser Fixes Comparison' actively highlight how browsers handle invalid HTML, making it an invaluable learning resource.",
+    demoLink: "https://paliwalgaurav27.github.io/DOM-Inspector-Playground/",
+    sourceLink: "https://github.com/paliwalgaurav27/DOM-Inspector-Playground",
+    howItWorks: "The application is built with vanilla JavaScript using a modular approach. The editor.js handles user input, while preview.js renders the HTML safely inside an iframe using srcdoc. The tree.js module uses DOMParser to parse the HTML and recursively build an interactive, collapsible tree UI representing element, text, and comment nodes. A unique feature compares the user's typed HTML against the browser-parsed document to show how the browser auto-corrects malformed markup. The app also integrates Prettier standalone for formatting and uses localStorage for theme persistence.",
+    screenshots: [
+      "img/dom-playground/Screenshot 2026-05-02 113752.png"
+    ],
+    challenges: [
+      {
+        problem: "Noisy browser fixes comparison due to full document output including <html>, <head>, and <body> tags.",
+        solution: "Compared normalized fragments instead of the full document, focusing only on the meaningful output for the user's HTML region to avoid false positives."
+      },
+      {
+        problem: "Preview injection could execute arbitrary scripts if user HTML contained <script> tags.",
+        solution: "Sanitized HTML and isolated the preview injection into a separate sandboxed iframe to prevent harmful execution."
+      },
+      {
+        problem: "Tree modal click-outside close logic misbehaved when clicking within the panel-tree but outside node-details.",
+        solution: "Refined the event listener logic to accurately detect clicks outside the modal content, ensuring smooth opening and closing interactions."
+      },
+      {
+        problem: "Browser fixes diff wasn't updating automatically when the editor content changed.",
+        solution: "Wired the tree.checkBrowserFixes() function to run after every editor update, ensuring the comparison stays perfectly in sync."
+      }
+    ]
+  },
+  {
+    id: "5",
+    title: "DevMap",
+    category: "WEB APP",
+    tagline: "The brutally honest tech roadmap guide that helps beginners navigate the confusing landscape of software development roles.",
+    thumbnail: "img/dev-map/Screenshot 2026-05-02 112740.png",
+    heroImage: "img/dev-map/Screenshot 2026-05-02 112740.png",
+    shortDesc: "An interactive web application providing honest, realistic guidance on different tech careers with structured learning paths.",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    builtWith: ["HTML5", "CSS3", "Vanilla JS", "Component-based CSS", "SVG", "LocalStorage API"],
+    features: [
+      "🗺️ Interactive Roadmaps for 6 Roles",
+      "🚦 Structured Learning Flow (Spine, Branches, Gates)",
+      "🎯 Smart Quiz Recommendation System",
+      "🌙 Dark Mode Toggle",
+      "📱 Responsive Design",
+      "📊 SVG Visual Connector Lines"
+    ],
+    theStory: "As a beginner learning web development, you likely encountered this common frustration: dozens of tutorials all claiming to be essential, conflicting advice about learning order, and no honest assessment of difficulty or job market reality. You realized that the problem isn't finding tutorials—it's choosing the right path without wasting months on the wrong direction. DevMap solves this by being brutally honest: It doesn't hide that Backend is harder than Frontend, it shows realistic timelines, explains why you should learn fundamentals first, and it helps beginners avoid the gatekeeping feeling.",
+    theIdea: "The idea was to build a tool I probably wished existed when I started. DevMap provides honest, realistic guidance on different tech careers—showing not just what to learn, but how difficult each path is, how long it takes, and what the actual job demands look like. This is a tool that shows full-stack capability, user experience thinking, JavaScript vanilla skills, responsive design, and data architecture.",
+    demoLink: "https://paliwalgaurav27.github.io/DevMap/",
+    sourceLink: "https://github.com/paliwalgaurav27/DevMap",
+    howItWorks: "The project uses a structured learning flow. The roadmap.js file acts as a reusable engine—it takes a nodes array of skills and renders the entire visual graph. Each role page (backend.html, frontend.html, etc.) just imports its own specialized data and calls the renderer. An interactive questionnaire on the homepage asks 4 targeted questions about learning preferences, scores answers against different roles, and recommends the best-fit career path. Theme persistence across pages is achieved using localStorage and applied before DOM rendering to avoid FOUC.",
+    screenshots: [
+      "img/dev-map/Screenshot 2026-05-02 112740.png",
+      "img/dev-map/Screenshot 2026-05-02 112802.png",
+      "img/dev-map/Screenshot 2026-05-02 112834.png",
+      "img/dev-map/Screenshot 2026-05-02 112850.png"
+    ],
+    challenges: [
+      {
+        problem: "Complex visual roadmaps dynamically connecting nodes.",
+        solution: "Created an SVG connector system that dynamically draws lines between nodes based on screen size."
+      },
+      {
+        problem: "Multiple similar pages creating redundant code.",
+        solution: "Built reusable roadmap.js rendering engine that all role pages import and customize with their own data."
+      },
+      {
+        problem: "Matching quiz scores to roles.",
+        solution: "Implemented a scoring system where each quiz answer increments role scores—final scores determine recommendation."
+      },
+      {
+        problem: "Theme persistence across pages avoiding Flash of Unstyled Content (FOUC).",
+        solution: "Used localStorage to save theme preference and apply it on page load, executing theme script immediately in main.js before DOM renders."
+      }
+    ]
+  },
+  {
     id: "3",
     title: "JS Event Loop Explorer",
     category: "WEB APP / TOOL",
