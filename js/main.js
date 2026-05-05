@@ -69,8 +69,8 @@ const projectsData = [
     ],
     theStory: "I created this website for SPB & Co, a professional accounting firm founded by FCMA Sunder Prakash Budkoti. The client needed a modern online presence to compete with larger firms and reach corporate clients searching for financial advisory services. I designed and developed a sophisticated, animated website that showcases their 14+ years of experience, expert team, and comprehensive service offerings. Integrating WhatsApp messaging allowed them to connect with leads instantly, matching their modern approach to client engagement.",
     theIdea: "Professional accounting firms need to establish a credible, modern online presence to attract corporate clients. Many traditional firms lack websites that effectively showcase their expertise, team credentials, and service offerings. This project solves that problem by providing a professional digital storefront that builds trust, displays qualifications, and makes it easy to get in touch through familiar communication channels like WhatsApp.",
-    demoLink: "https://paliwalgaurav27.github.io/spb.co/service.html",
-    sourceLink: "https://github.com/paliwalgaurav27/spb.co",
+    demoLink: "https://paliwalgaurav27.github.io/SPB.CO/",
+    sourceLink: "https://github.com/paliwalgaurav27/SPB.CO",
     howItWorks: "The website is built as a multi-page application with dynamically loaded header and footer components. When users visit, they see an animated hero section with a gradient background, followed by animated counter statistics that trigger when scrolled into view using the Intersection Observer API.\n\nThe site features four main pages—Home, About, Services, and Contact. The contact form integrates with WhatsApp API, automatically formatting and sending inquiry messages. All pages include smooth scroll reveal animations, sticky navigation with mobile menu toggle, and a back-to-top button. The responsive design adapts seamlessly from desktop to mobile.",
     screenshots: [
       "img/SPB&CO/Screenshot 2026-04-20 100937.png",
